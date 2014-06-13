@@ -25,7 +25,6 @@ class strongswan
 {
 
     include strongswan::install
-
     include strongswan::service
 
     if tagged('monit') {

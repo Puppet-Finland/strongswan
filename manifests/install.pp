@@ -1,6 +1,8 @@
 #
 # == Class: strongswan::install
 #
+# Install strongswan
+#
 class strongswan::install {
 
     include strongswan::params
@@ -9,5 +11,4 @@ class strongswan::install {
         name => "${::strongswan::params::package_name}",
         ensure => installed,
     }
-
 }
