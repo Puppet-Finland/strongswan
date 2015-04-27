@@ -3,13 +3,11 @@
 #
 # Configures strongswan to start on boot
 #
-class strongswan::service {
-
-    include strongswan::params
+class strongswan::service inherits strongswan::params {
 
     service { 'strongswan':
-        name => "${::strongswan::params::service_name}",
-        enable => true,
+        name    => $::strongswan::params::service_name,
+        enable  => true,
         require => Class['strongswan::install'],
     }
 }

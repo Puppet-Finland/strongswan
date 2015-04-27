@@ -24,11 +24,11 @@ class strongswan
 )
 {
 
-    include strongswan::install
-    include strongswan::service
+    include ::strongswan::install
+    include ::strongswan::service
 
     if tagged('monit') {
-        class { 'strongswan::monit':
+        class { '::strongswan::monit':
             monitor_email => $monitor_email,
         }
     }

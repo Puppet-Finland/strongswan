@@ -3,12 +3,10 @@
 #
 # Install strongswan
 #
-class strongswan::install {
-
-    include strongswan::params
+class strongswan::install inherits strongswan::params {
 
     package { 'strongswan-strongswan':
-        name => "${::strongswan::params::package_name}",
         ensure => installed,
+        name   => $::strongswan::params::package_name,
     }
 }

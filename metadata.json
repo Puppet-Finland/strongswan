@@ -1,0 +1,13 @@
+{
+  "name": "puppetfinland-strongswan",
+  "version": "0.3.1",
+  "author": "Puppet-Finland team",
+  "license": "BSD license",
+  "summary": "Setup strongswan",
+  "source": "https://github.com/Puppet-Finland/strongswan.git",
+  "project_page": "https://github.com/Puppet-Finland/strongswan",
+  "dependencies": [
+    { "name": "puppetfinland/monit", "version_requirement": ">= 0.5.0" },
+    { "name": "puppetfinland/os", "version_requirement": ">= 0.5.6" }
+  ]
+}
