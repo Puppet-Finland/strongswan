@@ -10,6 +10,7 @@ class strongswan::monit
 ) inherits strongswan::params
 {
     monit::fragment { 'strongswan-strongswan.monit':
+        basename   => 'strongswan',
         modulename => 'strongswan',
     }
 }
