@@ -1,0 +1,22 @@
+conn <%= @title %>
+  authby=psk
+  auto=route
+  dpdaction=hold
+  dpddelay=30s
+  dpdtimeout=60s
+  esp=<%= @conn_cipher_suites.join(',') %>
+  forceencaps=no
+  ike=<%= @ike_cipher_suites.join(',') %>
+  ikelifetime=8h
+  lifetime=1h
+  keyexchange=<%= @ike_version %>
+  mobike=no
+  type=tunnel
+  left=<%= @local_ip %>
+  leftid=<%= @local_identifier %>
+  leftsubnet=<%= @local_subnet %>
+  leftauth=psk
+  right=<%= @remote_ip %>
+  rightid=<%= @remote_identifier %>
+  rightsubnet=<%= @remote_subnet %>
+  rightauth=psk
